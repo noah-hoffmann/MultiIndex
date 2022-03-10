@@ -12,11 +12,12 @@ class SymmetricIndex(Indexer):
 
     def get_index(self, *indices):
         i, j = indices
-        return j + i * (i + 1) // 2
+        return self.limit * i - i * (i + 1) // 2 + j
 
     def get_indices(self, index: int):
-        i = int((-1 + sqrt(1 + 8 * index)) / 2)
-        j = index - i * (i + 1) // 2
+        x = (2 * self.limit + 1) / 2
+        i = int(x - sqrt(x ** 2 - 2 * index))
+        j = index - self.limit * i + i * (i + 1) // 2
         return i, j
 
 

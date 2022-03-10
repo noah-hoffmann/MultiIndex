@@ -1,10 +1,10 @@
 from MultiIndex import SymmetricIndex
 import pytest
 
-index_indices_pair = [(0, (0, 0)),
-                      (1, (1, 0)), (2, (1, 1)),
-                      (3, (2, 0)), (4, (2, 1)), (5, (2, 2)),
-                      (6, (3, 0)), (7, (3, 1)), (8, (3, 2)), (9, (3, 3))]
+index_indices_pair = [(0, (0, 0)), (1, (0, 1)), (2, (0, 2)), (3, (0, 3)),
+                      (4, (1, 1)), (5, (1, 2)), (6, (1, 3)),
+                      (7, (2, 2)), (8, (2, 3)),
+                      (9, (3, 3))]
 
 
 @pytest.mark.parametrize("index,indices", index_indices_pair)
